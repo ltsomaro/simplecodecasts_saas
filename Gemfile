@@ -24,7 +24,7 @@ gem 'coffee-rails', '4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Use Bootstrap libs for styling
 gem 'bootstrap-sass', '3.3.1'
@@ -42,7 +42,11 @@ gem 'spring',        group: :development
 # Devise for authentication and login
 gem 'devise','3.4.1'
 
+# Payment processing
+gem 'stripe', '1.16.1'
 
+# Use figaro to hide secret keys
+gem 'figaro', '1.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
