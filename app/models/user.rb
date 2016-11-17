@@ -6,4 +6,14 @@ class User < ActiveRecord::Base
 
   # Relationship to plan
   belongs_to :plan
+  attr_accessor :stripe_card_token
+  
+  def save_with_payment
+    if valid?
+      customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token) #charge customer and return id
+      self.stripe_customer_token = customer.id
+      save!
+    end
+  end
+  
 end
