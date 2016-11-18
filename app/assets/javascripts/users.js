@@ -1,9 +1,8 @@
 $(document).ready(function() {
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
-  // Watch for a form submission and prevent default action
+  // Watch for a form submission:
   $("#form-submit-btn").click(function(event) {
     event.preventDefault();
-    //prevent button from being pushed multiple times
     $('input[type=submit]').prop('disabled', true);
     var error = false;
     var ccNum = $('#card_number').val(),
