@@ -23,6 +23,11 @@ class PropertiesController < ApplicationController
         end
     end
     
+    def edit
+        @user = User.find(params[:user_id])
+        @property = @user.properties.find(params[:id])
+    end
+    
     private
     def property_params
         params.require(:property).permit(:property_name, :property_location, :description)
