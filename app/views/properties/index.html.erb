@@ -1,0 +1,23 @@
+<div class= "new">
+    <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center">Your Properties</h1>
+        <p class="text-center">Manage your properties.</p>
+        <div class="well">
+            <% for item in @user.properties %>
+                <table>
+                    <tr>
+                        <td>
+                            <%= link_to item.property_name, :controller => :properties, :action => :edit, :id=> item.id %>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                </table>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+
+

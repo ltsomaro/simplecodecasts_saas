@@ -13,6 +13,18 @@ class ContactsController < ApplicationController
             
             ContactMailer.contact_email(name, email, body).deliver
             flash[:success] = 'Message sent.'
+            
+            require 'twilio-ruby'
+            
+            
+
+            TWILIO_CLIENT.account.messages.create(
+            from: '+61437886843',
+            to: '+61418349489',
+            body: params[:contact][:comments]
+            )
+            
+         
             redirect_to new_contact_path
         else
             flash[:danger] = 'Error occured, message has not been sent.'

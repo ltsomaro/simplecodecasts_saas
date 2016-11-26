@@ -1,0 +1,100 @@
+contact.all
+Contact.all
+Plan.create(name: 'basic', price: 0)
+Plan.first
+Plan.create(name: 'pro', price: 10)
+Plan.first.name
+Plan.second.name
+git status
+e
+users.first
+Users.first
+user.first
+@Users
+select users
+user.find
+contat
+users
+Users
+user
+users.find(all)
+Users.find(all)
+contact
+Contact
+User
+User.first
+user.last
+User.last
+exite
+Users.all
+User.all
+Profile.all
+User.find(userid: 25)
+User.find(25)
+u = User.find(25)
+u
+u.first_name
+u.profile.first_name
+rails kill all
+ruby kill all
+$ sudo apt-get install imagemagick
+identify
+exec send-sms.rb
+twilio_token
+@twilio_sid
+2+2
+bundle exec send-sms.rb
+ActiveRecord::Base.configurations
+Rails.application.config.cache_classes
+::Rails.application.config
+cd root
+ruby send-sms.rb
+cd
+@client = Twilio::REST::Client.new account_sid, auth_token
+cd simplecodecasts
+#!/usr/bin/env ruby
+send-sms.rb
+twilio_sid
+:twilio_sid
+figaro.env.twilio_sid
+$twilio_sid
+$twilio_token
+$stripe_api_key
+Stripe.api_key
+sendgrid_username
+$sendgrid_username
+puts ENV["twilio_SID"]
+puts ENV['x_twilio_sid']
+p
+puts env
+puts ENV["STRIPE_API_KEY"]
+puts ENV[
+puts env['STRIPE_API_KEY']
+puts ENV['stripe_api_key']
+close
+puts twilio_sid
+puts ENV.variables
+puts twilio_sid_key
+puts env['twilio_sid']
+puts ENV['twilio_sid']
+Figaro.env.stripe_api_key
+Figaro.env.twilio_sid
+puts ENV['twilio_token']
+puts ENV.key
+production:
+    twilio_sid: ACc6cb8f07f065d688ded1e149ccf2b824
+    twilio_token: 33a27d2b815d5d592d5533fadaa90fc9
+sk_test_kijgguRZQtZTwoeBLmyznWij
+ENV["stripe_api_key"]
+rake figaro
+
+xit
+puts ENV["stripe_api_key"]
+ENV['twilio_sid']
+ENV["twilio_sid"]
+puts ENV.keys
+puts ENV["twilio_token"]
+puts ENV["twilio_sid"]
+ENV = "DEVELOPMENT"
+puts ENV
+exit

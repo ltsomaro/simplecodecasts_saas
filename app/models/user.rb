@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   # Relationship to plan
   belongs_to :plan
   has_one :profile
+  has_many :properties
   attr_accessor :stripe_card_token
 
   
