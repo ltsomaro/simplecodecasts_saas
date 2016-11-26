@@ -8,6 +8,7 @@
       <div class="well">
         <h2 class="text-center">Your Profile</h2>
         <% if current_user.profile %>
+          <p>Edit your profile and settings.</p>
           <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
           <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
         <% else %>
@@ -19,8 +20,13 @@
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Your Properties</h2>
-        <p>Manage your property information.</p>
-        <%= link_to "View your properties", user_properties_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
+        <% if current_user.properties.count > 1 %>
+          <p>Manage your property information.</p>
+          <%= link_to "View your properties", user_properties_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
+        <% else %>
+          <p>Create a property compendium.</p>
+          <%= link_to "Create a property compendium", new_user_property_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
+        <% end %>
       </div>
     </div>
   <% else %>

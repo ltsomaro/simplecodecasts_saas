@@ -3,7 +3,7 @@
         <h1 class="text-center">Property</h1>
         <p class="text-center"></p>
         <div class="well">
-            <%= form_for @property, url: user_properties_path, html: { multipart: true } do |f| %>
+            <%= form_for @property, url: user_property_path, html: { multipart: true } do |f| %>
                 <div class="form-group">
                     <%= f.label :property_name %>
                     <%= f.text_field :property_name, class: 'form-control' %>

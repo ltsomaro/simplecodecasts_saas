@@ -28,6 +28,17 @@ class PropertiesController < ApplicationController
         @property = @user.properties.find(params[:id])
     end
     
+    def update
+         @user = User.find (params[:user_id])
+         @property = @user.properties.find(params[:id])
+         if @property.update_attributes(property_params)
+            flash[:success] = "Property updated."
+            redirect_to user_properties_path (params[:user_id])
+        else
+            render action :edit
+        end
+    end
+    
     private
     def property_params
         params.require(:property).permit(:property_name, :property_location, :description)
