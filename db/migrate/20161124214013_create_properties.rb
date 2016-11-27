@@ -7,6 +7,6 @@ class CreateProperty < ActiveRecord::Migration
       t.text :description
       
       t.timestamps
-    endbundle
+     end
   end
 end
