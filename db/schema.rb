@@ -11,12 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161124214013) do
+ActiveRecord::Schema.define(version: 20161201025151) do
+
+  create_table "compendiums", force: true do |t|
+    t.integer  "property_id"
+    t.integer  "faq_view"
+    t.integer  "how_to_view"
+    t.integer  "dining_view"
+    t.integer  "activities_view"
+    t.integer  "rules_view"
+    t.integer  "warning_view"
+    t.integer  "contacts_view"
+    t.integer  "private_setting"
+    t.integer  "skin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contacts", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "faqs", force: true do |t|
+    t.integer  "property_id"
+    t.text     "question"
+    t.text     "description"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

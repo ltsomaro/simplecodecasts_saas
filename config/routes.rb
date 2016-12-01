@@ -15,12 +15,14 @@ Rails.application.routes.draw do
     resources :properties
   end
   
-  
+  resources :property do
+    resource :faqs
+  end
 
-  
+  resources :compendium
   resources :contacts
   get '/about' => 'pages#about'
-  get '/FAQ' => 'pages#FAQ'
+  get '/page3' => 'pages#page3'
   root 'pages#home'
   
 
