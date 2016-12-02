@@ -10,7 +10,7 @@
                             <%= link_to item.property_name, :controller => :properties, :action => :edit, :id=> item.id %>
                         </td>
                         <td>
-                            <%= button_to "Design", "#", class: 'btn btn-primary' %>
+                            <%= link_to "Design", new_property_compendium_path(item.id), class: 'btn btn-primary' %>
                         </td>
                         <td>
                             <%= button_to "Preview", "#", class: 'btn btn-warning' %>

@@ -6,6 +6,7 @@
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
    inflect.irregular 'property', 'properties'
+   inflect.irregular 'compendium', 'compendiums'
 end
 
 #   inflect.plural /^(ox)$/i, '\1en'

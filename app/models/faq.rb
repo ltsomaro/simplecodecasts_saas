@@ -1,4 +1,4 @@
-class faq < ActiveRecord::Base
+class Faq < ActiveRecord::Base
     belongs_to :property
     
     

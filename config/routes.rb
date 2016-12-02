@@ -15,11 +15,14 @@ Rails.application.routes.draw do
     resources :properties
   end
   
-  resources :property do
+  resources :properties do
     resource :faqs
   end
 
-  resources :compendium
+  resources :properties do
+    resource :compendium
+  end
+  
   resources :contacts
   get '/about' => 'pages#about'
   get '/page3' => 'pages#page3'
